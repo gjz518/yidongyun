@@ -23,9 +23,9 @@ sudo bash scripts/install.sh
 安装完成后登录：
 
 ```bash
-yidongyun sms-send <手机号>
-yidongyun sms-login <手机号> <短信验证码>
-yidongyun list
+sudo yidongyun sms-send <手机号>
+sudo yidongyun sms-login <手机号> <短信验证码>
+sudo yidongyun list
 ```
 
 `list` 会输出云电脑列表，例如：
@@ -45,7 +45,7 @@ sudo bash scripts/install-systemd.sh <userServiceId>
 手动保活 120 秒：
 
 ```bash
-yidongyun keepalive --user-service-id <userServiceId> --duration 120
+sudo yidongyun keepalive --user-service-id <userServiceId> --duration 120
 ```
 
 查看定时器：
@@ -63,8 +63,8 @@ journalctl -u yidongyun-keepalive.service -n 100 --no-pager
 重新登录：
 
 ```bash
-yidongyun sms-send <手机号>
-yidongyun sms-login <手机号> <短信验证码>
+sudo yidongyun sms-send <手机号>
+sudo yidongyun sms-login <手机号> <短信验证码>
 ```
 
 ## 文件位置

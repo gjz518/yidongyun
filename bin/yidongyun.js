@@ -8,7 +8,7 @@ const os = require('os');
 const path = require('path');
 const { spawn } = require('child_process');
 
-const ROOT = process.env.YDY_HOME || path.resolve(__dirname, '..');
+const ROOT = process.env.YDY_HOME || '/etc/yidongyun';
 const STATE_FILE = process.env.YDY_STATE || path.join(ROOT, 'state.json');
 const CLIENT_ROOT = process.env.YDY_CLIENT_ROOT || '/opt/yidongyun/client/opt/chuanyun-vdi-client';
 const SDK_ROOT = process.env.YDY_SDK_ROOT || path.join(CLIENT_ROOT, 'resources/app.asar.unpacked/node_modules');
