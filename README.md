@@ -12,6 +12,30 @@
 - systemd
 - 能访问 `https://soho.komect.com`
 
+### Ubuntu Server
+
+Ubuntu Server 可以直接使用本仓库的 systemd timer 部署方式，不需要使用旧的 cron 脚本。
+
+部署前建议确认：
+
+```bash
+uname -m
+cat /etc/os-release
+command -v apt
+command -v systemctl
+node -v
+```
+
+推荐条件：
+
+- `uname -m` 为 `x86_64`
+- Ubuntu 20.04 或更新版本
+- 系统可使用 `apt`
+- Node.js 为 18 或更新版本
+- 可使用 `systemctl`
+
+如果旧服务器上已经配置过其他保活脚本，建议先停掉旧定时任务，避免多台设备或多个脚本同时连接同一台云电脑。
+
 ### 飞牛 NAS / Debian 系统
 
 飞牛 NAS 上建议先确认环境：
